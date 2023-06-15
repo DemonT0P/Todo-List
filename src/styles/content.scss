@@ -1,0 +1,24 @@
+.content {
+  background-color: rgb(124, 124, 124);
+  padding: 20px;
+}
+
+.content__todo {
+  background-color: #f9f9f9;
+  border: 1px solid black;
+  box-shadow: inset 1px 1px 6px #808080;
+  padding: 8px;
+}
+
+.todo__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.todo__description {
+  font-style: italic;
+}
+
+.todo__done {
+  margin-left: 50%;
+}

@@ -1,0 +1,36 @@
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+  background-color: white;
+  width: fit-content;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+}
+
+#form__title,
+#form__description,
+#form__date,
+#form__priority,
+#form__project-name {
+  padding: 8px;
+}
+
+#form__submit-button-todo,
+#form__cancel-button-todo {
+  margin-top: 16px;
+  padding: 8px 0px;
+  font-weight: bold;
+}
+
+#form__submit-button-project,
+#form__cancel-button-project {
+  margin-top: 16px;
+  padding: 8px 0px;
+  font-weight: bold;
+}

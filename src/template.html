@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>To Do List</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>TO DO LIST</h1>
+        <div class="header__options">
+          <button class="options__option options__add-todo">New ToDo</button>
+          <button class="options__option options__add-project">
+            New Project
+          </button>
+        </div>
+      </header>
+      <nav class="sidebar"></nav>
+      <div class="content"></div>
+    </div>
+
+    <dialog class="add-todo" closed>
+      <form id="add-todo__form" method="post">
+        <label for="form__title">Title</label>
+        <input type="text" name="form__title" id="form__title" />
+        <label for="form__description">Description</label>
+        <input
+          type="text"
+          placeholder="Description"
+          name="form__description"
+          id="form__description"
+        />
+        <label for="form__description">Due Date</label>
+        <input
+          type="date"
+          placeholder="Due date"
+          name="form__date"
+          id="form__date"
+        />
+        <label for="form__priority">Priority</label>
+        <select name="form__priority" id="form__priority">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+        </select>
+        <button
+          type="submit"
+          id="form__submit-button-todo"
+          form="add-todo__form"
+        >
+          ADD TO DO
+        </button>
+        <button id="form__cancel-button-todo" type="button">CANCEL</button>
+      </form>
+    </dialog>
+
+    <dialog class="add-project" closed>
+      <form id="add-project__form" method="post">
+        <label for="form__project-name">Project's Name</label>
+        <input
+          type="text"
+          name="form__project-name"
+          id="form__project-name"
+          maxlength="50"
+        />
+        <button
+          type="submit"
+          id="form__submit-button-project"
+          form="add-project__form"
+        >
+          ADD PROJECT
+        </button>
+        <button id="form__cancel-button-project" type="button">CANCEL</button>
+      </form>
+    </dialog>
+  </body>
+</html>

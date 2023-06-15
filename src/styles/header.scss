@@ -1,0 +1,27 @@
+.header {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: inset 1px 1px 10px #808080;
+  border-bottom: 3px solid black;
+  padding: 12px;
+}
+
+.header__options {
+  display: flex;
+  gap: 8px;
+}
+
+.options__option {
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  &:hover {
+    box-shadow: inset 1px 1px 6px #808080;
+  }
+}

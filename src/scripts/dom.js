@@ -1,3 +1,5 @@
+import { setCurrentProject } from "./projects";
+
 export function DomTodo(todo) {
   let content = document.querySelector(".content");
 
@@ -34,5 +36,12 @@ export function DomProjects(project) {
   let projectBlueprint = document.createElement("div");
   projectBlueprint.setAttribute("class", "sidebar__project");
   projectBlueprint.innerText = project.name;
+  projectBlueprint.addEventListener("click", () => {
+    setCurrentProject(project.name);
+  });
   sidebar.appendChild(projectBlueprint);
+}
+
+export function cleanTodos() {
+  document.querySelector(".content").innerHTML = "";
 }

@@ -1,4 +1,5 @@
 import { DomTodo } from "./dom";
+import { addTodoToProject } from "./projects";
 
 class Todo {
   constructor(title, description, dueDate, priority) {
@@ -19,6 +20,7 @@ formAddTodoSubmit.addEventListener("submit", (e) => {
   let date = document.querySelector("#form__date").value;
   let priority = document.querySelector("#form__priority").value;
   let todo = new Todo(title, description, date, priority);
+  addTodoToProject(todo);
   DomTodo(todo);
 
   popupTodo.close();

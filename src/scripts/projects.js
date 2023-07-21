@@ -1,9 +1,9 @@
-import { DomProjects, DomTodo } from "./dom";
+import { DomProjects, DomTodo, removeProjectFromDom } from "./dom";
 import { cleanTodos } from "./dom";
 
 let popupProject = document.querySelector(".add-project");
-let AllProjects = [];
-let currentProject = "Default";
+export let AllProjects = [];
+export let currentProject = "Default";
 
 class Project {
   constructor(name) {
@@ -13,7 +13,6 @@ class Project {
 
   addToDo(todo) {
     this.todoList.push(todo);
-    console.log(`Added ${todo.title} to ${this.name}`);
   }
 }
 
@@ -21,7 +20,6 @@ export function setCurrentProject(projectName) {
   currentProject = projectName;
   cleanTodos();
   displayTodos(projectName);
-  console.log("mudou");
 }
 
 function displayTodos(projectName) {
@@ -58,16 +56,19 @@ document
   .querySelector(".options__add-project")
   .addEventListener("click", () => {
     popupProject.showModal();
-    console.log("Show Project");
   });
 
 document
   .querySelector("#form__cancel-button-project")
   .addEventListener("click", () => {
-    console.log("Cancel Project");
     popupProject.close();
   });
 
 let defaultProj = new Project("Default");
 AllProjects.push(defaultProj);
 DomProjects(defaultProj);
+
+export function deleteProject(project) {
+  removeProjectFromDom(AllProjects.indexOf(project));
+  AllProjects.splice(AllProjects.indexOf(project));
+}

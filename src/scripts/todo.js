@@ -1,5 +1,5 @@
-import { DomTodo } from "./dom";
-import { addTodoToProject } from "./projects";
+import { DomTodo, removeTodoFromDom } from "./dom";
+import { addTodoToProject, AllProjects, currentProject } from "./projects";
 
 class Todo {
   constructor(title, description, dueDate, priority) {
@@ -35,3 +35,10 @@ document
   .addEventListener("click", () => {
     popupTodo.close();
   });
+
+export function deleteTodo(todo) {
+  let project = AllProjects.find((item) => item.name == currentProject);
+  removeTodoFromDom(AllProjects.indexOf(project));
+  project.todoList.splice(project.todoList.indexOf(todo));
+  AllProjects[AllProjects.indexOf(project)] = project;
+}

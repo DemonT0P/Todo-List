@@ -24,7 +24,7 @@
     <dialog class="add-todo" closed>
       <form id="add-todo__form" method="post">
         <label for="form__title">Title</label>
-        <input type="text" name="form__title" id="form__title" />
+        <input type="text" name="form__title" id="form__title" required />
         <label for="form__description">Description</label>
         <input
           type="text"
@@ -34,13 +34,14 @@
         />
         <label for="form__description">Due Date</label>
         <input
+          required
           type="date"
           placeholder="Due date"
           name="form__date"
           id="form__date"
         />
         <label for="form__priority">Priority</label>
-        <select name="form__priority" id="form__priority">
+        <select name="form__priority" id="form__priority" required>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -61,6 +62,7 @@
       <form id="add-project__form" method="post">
         <label for="form__project-name">Project's Name</label>
         <input
+          required
           type="text"
           name="form__project-name"
           id="form__project-name"

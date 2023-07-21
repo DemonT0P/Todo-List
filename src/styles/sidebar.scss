@@ -16,3 +16,15 @@
 .sidebar__project:hover {
   box-shadow: inset 1px 1px 6px #808080;
 }
+
+.project__delete-button {
+  border: 0px;
+  background-color: red;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: rgb(138, 0, 0);
+  }
+}

@@ -8,6 +8,7 @@
   border: 1px solid black;
   box-shadow: inset 1px 1px 6px #808080;
   padding: 8px;
+  margin-bottom: 8px;
 }
 
 .todo__title {
@@ -15,10 +16,19 @@
   font-weight: bold;
 }
 
-.todo__description {
-  font-style: italic;
+.todo__is-done {
+  box-shadow: inset 1px 1px 20px green;
 }
 
-.todo__done {
+.todo__description {
+  font-style: italic;
+  line-break: anywhere;
+}
+
+.todo__done-button {
   margin-left: 50%;
+}
+
+.todo__button-delete {
+  display: block;
 }

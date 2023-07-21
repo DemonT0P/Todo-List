@@ -2,11 +2,10 @@ import { DomTodo, removeTodoFromDom } from "./dom";
 import { addTodoToProject, AllProjects, currentProject } from "./projects";
 
 class Todo {
-  constructor(title, description, dueDate, priority) {
+  constructor(title, description, dueDate) {
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
-    this.priority = priority;
   }
 }
 
@@ -18,8 +17,8 @@ formAddTodoSubmit.addEventListener("submit", (e) => {
   let title = document.querySelector("#form__title").value;
   let description = document.querySelector("#form__description").value;
   let date = document.querySelector("#form__date").value;
-  let priority = document.querySelector("#form__priority").value;
-  let todo = new Todo(title, description, date, priority);
+
+  let todo = new Todo(title, description, date);
   addTodoToProject(todo);
   DomTodo(todo);
 

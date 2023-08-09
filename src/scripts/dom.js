@@ -1,5 +1,6 @@
 import { setCurrentProject, deleteProject } from "./projects";
 import { deleteTodo } from "./todo";
+import { getFromStorage } from "./storage";
 
 export function DomTodo(todo) {
   let content = document.querySelector(".content");
